@@ -1,0 +1,859 @@
+{
+	"info": {
+		"_postman_id": "52e7be96-61f1-46cd-b9e8-5e2fab56e03a",
+		"name": "Booking System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33616492"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Kiruba V\",\r\n  \"email\": \"kiruba@gmail.com\",\r\n  \"password\": \"password\",\r\n  \"role\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Kiruba V\",\r\n  \"email\": \"kiruba@gmail.com\",\r\n  \"password\": \"password\",\r\n  \"role\": \"admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "307"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"133-65TMN18EL6pgBa1/4GVnDRKqT10\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Mar 2025 01:05:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered successfully\",\n    \"user\": {\n        \"id\": \"d79469af-1375-4f2f-9236-9fe984e264ae\",\n        \"name\": \"Kiruba V\",\n        \"email\": \"kiruba@gmail.com\",\n        \"password\": \"$2b$10$5zRW7/CFt/OqEPSAP4it5OwL0nVxPMoYuKLlAIgsjgcUJzJtm7Ew6\",\n        \"role\": \"admin\",\n        \"updatedAt\": \"2025-03-14T01:05:58.959Z\",\n        \"createdAt\": \"2025-03-14T01:05:58.959Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"kiruba@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"kiruba@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "248"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f8-T8U+3bdioWzvuFvKddUHYySARhA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Mar 2025 01:08:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ3OTQ2OWFmLTEzNzUtNGYyZi05MjM2LTlmZTk4NGUyNjRhZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MTkxNDUzOSwiZXhwIjoxNzQxOTE4MTM5fQ.QrGKf-R-LJKkqnENkAJHMTVpHZGj7OQyorGew3ACqnU\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "Add Event",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/event/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"event",
+								"add"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"CTO Meetup\",\r\n  \"date\": \"2025-06-20\",\r\n  \"totalTickets\": 50,\r\n  \"availableTickets\": 50\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/event/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"event",
+										"add"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "266"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10a-Uy652ZFcUj/m7UujYOFmq1rvnDs\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Mar 2025 01:37:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Event created successfully\",\n    \"event\": {\n        \"id\": \"a0172eb0-d0be-40d4-81d9-97cd5d6520b8\",\n        \"name\": \"CTO Meetup\",\n        \"date\": \"2025-06-20T00:00:00.000Z\",\n        \"totalTickets\": 50,\n        \"availableTickets\": 50,\n        \"updatedAt\": \"2025-03-14T01:37:20.436Z\",\n        \"createdAt\": \"2025-03-14T01:37:20.436Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Events",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAxMWExN2Q3LThhOWMtNGE3OC04NzA2LWYxMzg4NjVmODk4ZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MTkyNDM1MSwiZXhwIjoxNzQxOTI3OTUxfQ.ZORGHhifeSdx4cFVSPOL0536vR5mUl2LaSByz32OmSo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/event/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"event",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Event Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/event/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"event",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "449"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c1-8TFSc4x++AmyvXrwdk8s5shtg4M\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Mar 2025 01:39:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"32ac3f30-efc4-4a8a-9fee-04fa990f4fa8\",\n        \"name\": \"Tech Conference 2025\",\n        \"date\": \"2025-06-15T00:00:00.000Z\",\n        \"totalTickets\": 100,\n        \"availableTickets\": 100,\n        \"createdAt\": \"2025-03-14T01:36:43.451Z\",\n        \"updatedAt\": \"2025-03-14T01:36:43.451Z\"\n    },\n    {\n        \"id\": \"a0172eb0-d0be-40d4-81d9-97cd5d6520b8\",\n        \"name\": \"CTO Meetup\",\n        \"date\": \"2025-06-20T00:00:00.000Z\",\n        \"totalTickets\": 50,\n        \"availableTickets\": 50,\n        \"createdAt\": \"2025-03-14T01:37:20.436Z\",\n        \"updatedAt\": \"2025-03-14T01:37:20.436Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Delete Event",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/event/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"event",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Events Copy",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/event/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"event",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "973c26ad-d576-445c-9aba-3cb42282d8b4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28-wRdTlJ5aU6ll9KPBiGmQileIzOM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Mar 2025 01:40:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Event deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Add booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjczYWVjM2E5LTVlNzctNDYzZS1iYzYxLWJmNTc5YzFhMmU1NiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQxOTE4ODQ2LCJleHAiOjE3NDE5MjI0NDZ9.yWnf10kEi4NNiGPiu93udQsJVwF7G8WDKkOYDqObvEI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/booking/add/:eventId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"booking",
+								"add",
+								":eventId"
+							],
+							"variable": [
+								{
+									"key": "eventId",
+									"value": "a0172eb0-d0be-40d4-81d9-97cd5d6520b8"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "already booking",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventId\": \"a0172eb0-d0be-40d4-81d9-97cd5d6520b8\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/booking/add/:eventId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"booking",
+										"add",
+										":eventId"
+									],
+									"variable": [
+										{
+											"key": "eventId",
+											"value": "32ac3f30-efc4-4a8a-9fee-04fa990f4fa8"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "48"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"30-hWHJrxDhOiJ5OZGtnsF+Z3fry8M\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Mar 2025 02:37:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"You have already booked this event\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Cancel Booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBiZjBhNWI0LTVkNTAtNDg1YS05Y2U5LWE1NTc0MTk2Y2MzZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQxOTI3NzA4LCJleHAiOjE3NDE5MzEzMDh9.FtYVsRWrSulrqeC00oa2lyaULKg2XvmRrvoKtl0u0mc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/booking/cancel/:bookingId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"booking",
+								"cancel",
+								":bookingId"
+							],
+							"variable": [
+								{
+									"key": "bookingId",
+									"value": "99274807-0462-4418-8903-d238c2b5ea57"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "already booking",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventId\": \"a0172eb0-d0be-40d4-81d9-97cd5d6520b8\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/booking/add/:eventId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"booking",
+										"add",
+										":eventId"
+									],
+									"variable": [
+										{
+											"key": "eventId",
+											"value": "32ac3f30-efc4-4a8a-9fee-04fa990f4fa8"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "48"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"30-hWHJrxDhOiJ5OZGtnsF+Z3fry8M\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Mar 2025 02:37:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"You have already booked this event\"\n}"
+						},
+						{
+							"name": "Add booking Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/booking/cancel/:bookingId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"booking",
+										"cancel",
+										":bookingId"
+									],
+									"variable": [
+										{
+											"key": "bookingId",
+											"value": "99274807-0462-4418-8903-d238c2b5ea57"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c-vn7urDvsvmQ1iZsIeHL+2J7OurY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Mar 2025 05:03:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Booking canceled successfully!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Booking List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxMDk4MmViLTQ0YWEtNDZiMy1hZmE0LTBiNjY1ZmY3ZGIzNSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQxOTI0NDE1LCJleHAiOjE3NDE5MjgwMTV9.ZUW7_nEgEDAWujzQ5iXkiEb_PxaWoLWAIrr08AJcz20",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/booking/my-bookings-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"booking",
+								"my-bookings-list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/booking/my-bookings-list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"booking",
+										"my-bookings-list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "431"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1af-xVEJOO2JwbeILa/uB5BGTY4+SuQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Mar 2025 04:10:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"bookings\": [\n        {\n            \"id\": \"6b4a8092-ee10-4f50-b1f2-272e24717280\",\n            \"userId\": \"810982eb-44aa-46b3-afa4-0b665ff7db35\",\n            \"eventId\": \"ddeeca89-b9f1-41c6-bbc9-ebf84046ff74\",\n            \"createdAt\": \"2025-03-14T03:54:01.931Z\",\n            \"updatedAt\": \"2025-03-14T03:54:01.931Z\",\n            \"user_id\": \"810982eb-44aa-46b3-afa4-0b665ff7db35\",\n            \"event_id\": \"ddeeca89-b9f1-41c6-bbc9-ebf84046ff74\",\n            \"user\": {\n                \"name\": \"Amir\"\n            },\n            \"event\": {\n                \"name\": \"Tech Conference 2025\",\n                \"date\": \"2025-06-17T00:00:00.000Z\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
